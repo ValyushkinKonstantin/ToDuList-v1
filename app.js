@@ -6,6 +6,8 @@ let items = ["first", "second", "last"];
 let itemsLenth = items.length;
 let workItems = [];
 
+const PORT = process.env.PORT||3000
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -62,6 +64,6 @@ res.render("about", { });
 
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000")
+app.listen(PORT, function() {
+  console.log("Server started on port 3000 || heroku PORT")
 });
